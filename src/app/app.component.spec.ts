@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent1 } from './app.component';
+import { ListerAppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,25 +9,25 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent1
+        ListerAppComponent
       ],
     }).compileComponents();
   }));
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent1);
+    const fixture = TestBed.createComponent(ListerAppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it(`should have as title 'sample-zulu'`, () => {
-    const fixture = TestBed.createComponent(AppComponent1);
+    const fixture = TestBed.createComponent(ListerAppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('sample-zulu');
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent1);
+    const fixture = TestBed.createComponent(ListerAppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('sample-zulu app is running!');
